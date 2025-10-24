@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://bddwfljeh2thd"]
+
+[ext_resource type="Texture2D" uid="uid://ogu21ixgdm50" path="res://assets/test.svg" id="1_fid5a"]
+
+[node name="Dialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = -4.0
+offset_right = -5.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+offset_right = 1186.5599
+offset_bottom = 613.36
+scale = Vector2(0.38207325, 0.419285)
+texture = ExtResource("1_fid5a")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.62200004
+anchor_top = 0.59400004
+anchor_right = 1.0
+anchor_bottom = 0.98300004
+offset_left = 0.7598877
+offset_top = 0.47998047
+offset_right = 1195.0
+offset_bottom = 580.36
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.38207325, 0.419285)
+texture = ExtResource("1_fid5a")
+expand_mode = 1
