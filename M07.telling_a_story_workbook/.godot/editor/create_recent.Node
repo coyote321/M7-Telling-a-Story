@@ -1,4 +1,7 @@
 Button
+BoxContainer
+VBoxContainer
+AudioStreamPlayer
 RichTextLabel
 TextureRect
 ColorRect
