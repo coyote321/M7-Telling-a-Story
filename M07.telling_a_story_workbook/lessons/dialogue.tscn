@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bddwfljeh2thd"]
+[gd_scene load_steps=8 format=3 uid="uid://bddwfljeh2thd"]
 
 [ext_resource type="Shader" uid="uid://cs15e2hgd2lan" path="res://assets/sliding_background.gdshader" id="1_1cblk"]
 [ext_resource type="Theme" uid="uid://drays61pfu7xc" path="res://lessons/main_theme.tres" id="1_5dtme"]
+[ext_resource type="Script" uid="uid://ddvtvvf77purg" path="res://lessons/dialogue.gd" id="2_6cfwb"]
 [ext_resource type="Texture2D" uid="uid://bnly1gkbxw6b5" path="res://assets/bubble_pattern.png" id="2_rjqnu"]
 [ext_resource type="Texture2D" uid="uid://copkt78vgp37i" path="res://assets/sophia.png" id="3_5dtme"]
 [ext_resource type="Texture2D" uid="uid://d000xjtr4iqtk" path="res://assets/emotion_regular.png" id="4_rjqnu"]
@@ -9,7 +10,7 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6cfwb"]
 shader = ExtResource("1_1cblk")
 shader_parameter/pattern_sampler = ExtResource("2_rjqnu")
-shader_parameter/bg_color = Color(0.5819498, 0.39978254, 0.72781783, 1)
+shader_parameter/bg_color = Color(0.8086829, 0.3005668, 0.2633402, 1)
 shader_parameter/pattern_color = Color(0.79623353, 0.752559, 0.82334656, 1)
 shader_parameter/pattern_size = 256.0
 
@@ -25,6 +26,7 @@ offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_5dtme")
+script = ExtResource("2_6cfwb")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_6cfwb")
@@ -38,6 +40,7 @@ offset_right = 8.0
 offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.9933718, 0.9933718, 0.9933718, 1)
 
 [node name="Body" type="TextureRect" parent="."]
 layout_mode = 1
@@ -69,6 +72,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.537
@@ -84,6 +88,7 @@ text = "Hello World!"
 fit_content = true
 
 [node name="NextButton" type="Button" parent="."]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.92300004
