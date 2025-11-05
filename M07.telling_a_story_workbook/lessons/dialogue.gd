@@ -2,12 +2,40 @@ extends Control
 @onready var next_button: Button = %NextButton
 @onready var rich_text_label: RichTextLabel = %RichTextLabel
 @onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
+@onready var body: TextureRect = %Body
+@onready var expression: TextureRect = %Expression
 
-var dialogue_items : Array[String] = [
-	"Hey Bob",
-	"How is your day going",
-	"im been having a great day",
-	"And so are you",
+
+var expressions := {
+	"happy": preload ("res://assets/emotion_happy.png"),
+	"regular": preload ("res://assets/emotion_regular.png"),
+	"sad": preload ("res://assets/emotion_sad.png"),
+}
+
+
+var dialogue_items : Array[Dictionary] = [
+	{
+		"expression": expressions["regular"],
+		"text": "I'm learning about Arrays...",
+	},
+	{
+		"expression": expressions["sad"],
+		"text": "... and it is a little bit complicated.",
+	},
+	{
+		"expression": expressions["happy"],
+		"text": "Let's see if I got it right: an array is a list of values!",
+	},
+	{
+		"expression": expressions["regular"],
+		"text": "Did I get it right? Did I?",
+	},
+	{
+		"expression": expressions["happy"],
+		"text": "Hehe! Bye bye~!",
+	},
+
+
 ]
 var current_item_index := 0
 
@@ -17,7 +45,8 @@ func _ready() -> void:
 
 func show_text() -> void:
 	var current_item := dialogue_items[current_item_index]
-	rich_text_label.text = current_item
+	rich_text_label.text = current_item["text"]
+	expression.texture = current_item["expression"]
 	rich_text_label.visible_ratio = 0.0
 	var tween := create_tween()
 	var text_appearing_duration := 1.2
