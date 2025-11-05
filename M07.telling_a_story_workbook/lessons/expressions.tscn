@@ -77,33 +77,10 @@ offset_right = 618.0
 offset_bottom = 219.0
 metadata/_edit_group_ = true
 
-[node name="BoxContainer" type="BoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="ButtonSofia" type="Button" parent="VBoxContainer/BoxContainer"]
+[node name="RowBodies" type="HBoxContainer" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Sophia"
 
-[node name="ButtonPink" type="Button" parent="VBoxContainer/BoxContainer"]
+[node name="RowExpressions" type="HBoxContainer" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Pink"
-
-[node name="BoxContainer2" type="BoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="ButtonRegular" type="Button" parent="VBoxContainer/BoxContainer2"]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Regular"
-
-[node name="ButtonSad" type="Button" parent="VBoxContainer/BoxContainer2"]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Sad"
-
-[node name="ButtonHappy" type="Button" parent="VBoxContainer/BoxContainer2"]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Happy"
