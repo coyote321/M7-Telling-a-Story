@@ -20,27 +20,27 @@ var expressions := {
 var dialogue_items : Array[Dictionary] = [
 	{
 		"expression": expressions["regular"],
-		"text": "I'm learning about Arrays...",
+		"text": "[shake]I'm learning about Arrays...NOOOOOOOO[/shake]",
 		"character": bodies["sophia"],
 	},
 	{
 		"expression": expressions["sad"],
-		"text": "... and it is a little bit complicated.",
+		"text": "... and it is a pretty [rainbow val=0.8]complicated.[/rainbow] MAN",
 		"character": bodies["pink"],
 	},
 	{
 		"expression": expressions["happy"],
-		"text": "Let's see if I got it right: an array is a list of values!",
+		"text": "[tornado freq=1.0]Let's see if I got it right: an array is a list of values![/tornado]",
 		"character": bodies["sophia"],
 	},
 	{
 		"expression": expressions["regular"],
-		"text": "Did I get it right? Did I?",
+		"text": "[wave]Did I get it right? Did[/wave] I?",
 		"character": bodies["pink"],
 	},
 	{
 		"expression": expressions["happy"],
-		"text": "Hehe! Bye bye~!",
+		"text": "Hehe! MAYBE [rainbow val=0.8]Bye bye~![/rainbow] ",
 		"character": bodies["sophia"],
 	},
 
